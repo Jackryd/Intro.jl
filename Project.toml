@@ -3,11 +3,25 @@ uuid = "27d684bd-7c89-418b-b2df-4d8aff85963c"
 authors = ["Anton Oresten"]
 version = "1.0.0-DEV"
 
+[deps]
+CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
+Colors = "5ae59095-9a9b-59fe-a467-6f913c188581"
+Einops = "e3ce28c8-8bfb-4704-8add-e3e7f14b55c9"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
+StyledStrings = "f489334b-da3d-4c2e-b8f0-e476e12c162b"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
+ThreadsX = "ac1d9e8a-700a-412c-b207-f0111f4b6c0d"
+Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
+
 [compat]
+CUDA = "5.8.2"
+Colors = "0.13.1"
+Einops = "0.1.4"
+Images = "0.26.2"
+SpecialFunctions = "2.5.1"
+StyledStrings = "1.11.0"
+Symbolics = "6.41.0"
+ThreadsX = "0.1.12"
+Zygote = "0.7.9"
 julia = "1.10"
-
-[extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-
-[targets]
-test = ["Test"]
