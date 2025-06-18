@@ -26,6 +26,8 @@ function Base.replace_in_print_matrix(x::OneHotArray{N}, i::Integer, j::Integer,
 end
 
 
+Base.sum(A::OneHotArray) = 1
+
 using LinearAlgebra
 
 function LinearAlgebra.dot(A::AbstractArray{<:Number,N}, B::OneHotArray{N}) where N
