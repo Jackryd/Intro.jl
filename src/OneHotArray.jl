@@ -24,3 +24,14 @@ unhot(A::OneHotArray, collection) = collection[A.index...]
 function Base.replace_in_print_matrix(x::OneHotArray{N}, i::Integer, j::Integer, s::AbstractString) where N
     x[i,j] ? s : Base.replace_with_centered_mark(s)
 end
+
+
+using LinearAlgebra
+
+function LinearAlgebra.dot(A::AbstractArray{<:Number,N}, B::OneHotArray{N}) where N
+    return A[B.index...]
+end
+
+function LinearAlgebra.dot(A::OneHotArray{N}, B::AbstractArray{<:Number,N}) where N
+    return dot(B, A)
+end
